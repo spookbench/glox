@@ -42,8 +42,8 @@ func runFile(path string) {
 }
 
 func run(s string) {
-	l := lexer.New()
-	tokens := l.ScanTokens(s)
+	l := lexer.New(s)
+	tokens := l.ScanTokens()
 
 	for _, token := range tokens {
 		fmt.Println(token)
